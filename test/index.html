@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>老友记</title>
+  <link href="styles/style.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+
+  <script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts.min.js"></script>
+
+</head>
+
+<body>
+  <h1>Friends</h1>
+  <img src="images/friends.jpg" alt="My test image" />
+  <!-- paragraph 段落 -->
+  <p>
+    这是老友记的简介：
+    The show follows three men and three women living in New York City, Monica, Chandler,
+    Rachel, Phoebe, Joey, and Ross, who act as each other's best friends. The series premiered
+    on September 22, 1994 on NBC-TV and ran for ten seasons, with the final episode premiering
+    on May 6, 2004. The reunion special then went live on May 27, 2021 on streaming platform HBO Max.
+  </p>
+  <!-- 无序列表 -->
+  <ul>
+    <li>Phoebe</li>
+    <li>Rachel</li>
+    <li>Monica</li>
+    <li>Joey</li>
+    <li>Ross</li>
+    <li>Chandler</li>
+  </ul>
+  <!-- 有序列表 -->
+  <ol>
+    <li>Phoebe</li>
+    <li>Rachel</li>
+    <li>Monica</li>
+    <li>Joey</li>
+    <li>Ross</li>
+    <li>Chandler</li>
+  </ol>
+  <!-- 超链接 anchor -->
+  <p> Click <a href="https://baike.baidu.com/item/%E8%80%81%E5%8F%8B%E8%AE%B0/125870">Here</a> to learn more
+    informations
+  </p>
+
+
+  <div id="main" style="width: 600px;height:400px;"></div>
+  <script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    let myChart = echarts.init(document.getElementById('main'));
+
+    // 指定图表的配置项和数据
+    let option = {
+      title: {
+        text: 'ECharts 入门示例'
+      },
+      tooltip: {},
+      legend: {
+        data: ['销量']
+      },
+      xAxis: {
+        data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+      },
+      yAxis: {},
+      series: [{
+        name: '销量',
+        type: 'bar',
+        data: [5, 20, 36, 10, 10, 20]
+      }]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+  </script>
+  <button>切换用户</button>
+  <script src="scripts/main.js" defer></script>
+</body>
+
+</html>
